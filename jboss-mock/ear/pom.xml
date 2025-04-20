@@ -1,0 +1,23 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.example</groupId>
+    <artifactId>jboss-mock</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>ear</artifactId>
+  <packaging>ear</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.example</groupId>
+      <artifactId>webapp</artifactId>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>jboss-mock</finalName>
+    <directory>${project.basedir}/../../deployments</directory>
+  </build>
+</project>

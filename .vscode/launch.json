@@ -1,0 +1,29 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Attach to JBoss (8787)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 8787,
+      "projectName": "jboss-mock",
+      "sourcePaths": [
+        "${workspaceFolder}/jboss-mock/webapp/src/main/java",
+        "${workspaceFolder}/jboss-mock/ejb/src/main/java"
+      ]
+    },
+    {
+      "type": "java",
+      "name": "Attach to WildFly (8788)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 8788,
+      "projectName": "jboss-mock",
+      "sourcePaths": [
+        "${workspaceFolder}/jboss-mock/webapp/src/main/java",
+        "${workspaceFolder}/jboss-mock/ejb/src/main/java"
+      ]
+    }
+  ]
+}

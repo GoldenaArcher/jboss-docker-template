@@ -1,0 +1,26 @@
+services:
+  jboss:
+    build:
+      context: ./jboss
+      dockerfile: Dockerfile
+    container_name: jboss-eap
+    ports:
+      - "8080:8080"
+      - "9990:9990"
+      - "8787:8787"
+    volumes:
+      - ./deployments/jboss-mock:/opt/jboss/jboss-eap-6.4/standalone/deployments
+    restart: unless-stopped
+
+  wildfly:
+    build:
+      context: ./wildfly
+      dockerfile: Dockerfile
+    container_name: wildfly-8
+    ports:
+      - "8180:8080"
+      - "9991:9990"
+      - "8788:8787"
+    volumes:
+      - ./deployments/jboss-mock/webapp-1.0.0.war:/opt/wildfly/wildfly-8.2.0.Final/standalone/deployments/webapp-1.0.0.war
+    restart: unless-stopped

@@ -1,0 +1,13 @@
+.DS_Store
+
+jboss/*.zip
+wildfly/*.zip
+
+*.zip
+
+jboss-eap-*/        
+wildfly-*/         
+
+**/target/
+
+deployments/
