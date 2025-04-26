@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="webapp" />
+      </profile>
+      <profile name="Annotation profile for jboss-mock" enabled="true">
+        <sourceOutputDir name="../../deployments/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../deployments/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ear" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

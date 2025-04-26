@@ -10,6 +10,7 @@ services:
       - "8787:8787"
     volumes:
       - ./deployments/jboss-mock:/opt/jboss/jboss-eap-6.4/standalone/deployments
+      - ./standalone.xml:/opt/jboss/jboss-eap-6.4/standalone/configuration/standalone.xml
     restart: unless-stopped
 
   wildfly:
@@ -23,4 +24,5 @@ services:
       - "8788:8787"
     volumes:
       - ./deployments/jboss-mock/webapp-1.0.0.war:/opt/wildfly/wildfly-8.2.0.Final/standalone/deployments/webapp-1.0.0.war
+      # - ./standalone.xml:/opt/wildfly/wildfly-8.2.0.Final/standalone/configuration/standalone.xml
     restart: unless-stopped

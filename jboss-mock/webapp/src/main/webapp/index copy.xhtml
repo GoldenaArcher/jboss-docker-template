@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+  <title>JSF + AngularJS</title>
+  <script src="angular/lib/angular/angular.js"></script>
+</h:head>
+
+<h:body>
+  <h:panelGroup layout="block">
+    <!-- JSF will ignore {{ }} as long as it's not within EL context -->
+    <script src="angular/app/main.controller.js"></script>
+
+    <div ng-app="demoApp" ng-controller="MainController">
+      <h2>{{ message }}</h2>
+
+      <input type="text" ng-model="userInput" />
+      <p>You typed: {{ userInput }}</p>
+
+      <ul>
+        <li ng-repeat="item in items">{{ item }}</li>
+      </ul>
+
+      <button ng-click="addItem()">Add</button>
+    </div>
+  </h:panelGroup>
+</h:body>
+</html>

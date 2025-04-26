@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
-<h:head>
-  <title>Mock JSF App</title>
-</h:head>
-<h:body>
-  <h1>Hello from JSF!</h1>
-</h:body>
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+  <h:head>
+    <title>Mock JSF App</title>
+  </h:head>
+  <h:body>
+    <h1>Hello from JSF!</h1>
+    <iframe
+      src="angular/angular.html"
+      style="width: 100%; height: 80vh; border: none"
+      id="angular-iframe"
+    ></iframe>
+
+    <script>
+      // set the token in the iframe
+      document.getElementById("angular-iframe").onload = function () {
+        // any actual method to get the token
+        var token = "example_token_passed_to_iframe";
+        // this.contentWindow.authToken = token;
+        this.contentWindow.postMessage({ type: "SET_TOKEN", token }, "*");
+      }
+
+    </script>
+  </h:body>
 </html>
